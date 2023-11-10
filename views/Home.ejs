@@ -16,7 +16,9 @@
          <h5><%= post.submitTime %></h5>
          <h5><%= post.subject %></h5>
          <h5><%= post.topic %></h5>
-         <a href="/api/posts/next/<%=post.id%>" >next</a>
+         <a href="/api/posts/next/<%=post.postNumber - 1 %>">prev</a>
+         <a href="/api/posts/next/<%=post.postNumber  + 1%>">next</a>
+         
         </div>
         <% }) %> 
 </body>
