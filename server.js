@@ -11,7 +11,6 @@ app.use(bodyParser.json());
 app.set('view engine' , 'ejs');
 
 
-let questionarr = [];
 
 mongoose.connect(`mongodb+srv://ngawangg:applepie@cluster0.7h0rl9g.mongodb.net/truly?retryWrites=true&w=majority` ,);
 
@@ -77,6 +76,31 @@ app.post('/admin',(req,res)=>{
         res.render('admin.ejs')
     }
 })
+
+
+
+app.get('/api/posts/next/:id', async (req, res) => {
+    const postId = req.params.id;
+  
+    try {
+      // Use findById to find a document by its _id
+      const foundPost = await Post.findById(postId);
+  
+      if (foundPost) {
+        // Render the 'home' page with the specific post
+        res.render('home', {
+          posts: [foundPost], // Pass the found post as an array to match your rendering logic
+        });
+      } else {
+        console.log(`Post with id ${postId} not found`);
+        res.status(404).json({ message: `Post with id ${postId} not found` });
+      }
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Internal Server Error' });
+    }
+  });
+
 
 
 app.listen(port , () => {
