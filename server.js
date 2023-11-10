@@ -84,12 +84,26 @@ app.get("/" , function(req,res){
      })
 })
 
+app.get('/home', async (req, res) => {
+    try {
+        // Find the first post in the database
+        const firstPost = await Post.findOne({}).sort({ postNumber: 1 });
 
-app.get('/home', (req,res)=>{
-    res.render('home', {
-        posts: [foundPost[0]], // Pass the found post as an array to match your rendering logic
-      });
-})
+        if (firstPost) {
+            // Render the 'home' page with the first post
+            res.render('home', {
+                posts: [firstPost],
+            });
+        } else {
+            console.log('No posts found in the database');
+            res.status(404).json({ message: 'No posts found in the database' });
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Internal Server Error' });
+    }
+});
+
 
 
 
@@ -112,35 +126,6 @@ app.post('/admin',(req,res)=>{
     }
 })
 
-
-
-
-// app.get('/api/posts/next/:postNumber', async (req, res) => {
-//     const postNumber = req.params.postNumber;
-
-   
-//     try {
-//         const postCount = await Post.countDocuments();
-//         // Use findOne to find a document by its postNumber
-//         if(postNumber === 0){
-//             postNumber = postCount;
-//         }
-//         const foundPost = await Post.findOne({ postNumber: postNumber });
-
-//         if (foundPost) {
-//             // Render the 'home' page with the specific post
-//             res.render('home', {
-//                 posts: [foundPost], // Pass the found post as an array to match your rendering logic
-//             });
-//         } else {
-//             console.log(`Post with postNumber ${postNumber} not found`);
-//             res.status(404).json({ message: `Post with postNumber ${postNumber} not found` });
-//         }
-//     } catch (error) {
-//         console.error(error);
-//         res.status(500).json({ message: 'Internal Server Error' });
-//     }
-// });
 
 
 app.get('/api/posts/next/:postNumber', async (req, res) => {
