@@ -75,7 +75,7 @@ app.get("/" , async function(req,res){
 
         if (firstPost) {
             // Render the 'home' page with the first post
-            res.render('home', {
+            res.render('home.ejs', {
                 posts: [firstPost],
             });
         } else {
