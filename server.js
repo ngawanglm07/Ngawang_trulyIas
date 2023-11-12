@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.set('view engine' , 'ejs');
 app.use(express.static("public"));
+app.set('views', '/opt/render/project/src/views');
 
 
 // mongoose connection
@@ -170,9 +171,7 @@ app.get('/search-item' , async (req,res)=>{
              
              res.render('data.ejs', {posts:searchResults});
          } else {
-            console.log('s')
             res.redirect('/');
- 
          }
      } catch (error) {
          console.error(error);
