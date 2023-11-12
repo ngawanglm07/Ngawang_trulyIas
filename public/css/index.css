@@ -15,17 +15,49 @@ a {
 } 
 
 
+body{ 
+  background-image: url("../images/Yonsei-University-campus.-Photo-via-Yonsei-University..jpg");
+  background-size: cover;
+  line-height: 1.6;
+}
+
+
 #question{
  border: 1px solid blue;
 }
 
 
-body {
-   
-    background-image: url("../images/Yonsei-University-campus.-Photo-via-Yonsei-University..jpg");
-    background-size: cover;
-    line-height: 1.6;
-  }
+
+/* css for navbar */
+.navbar{
+  background-color: #00264d;
+  height: 40px;
+  display: flex;
+  margin: 0 auto;
+}
+
+
+a{
+ margin-top: 5px;
+}
+
+.aa{
+  padding:3px;
+  color: #00264d;
+  background-color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.aa:hover{
+  color: #007bff;
+}
+ /* css for navbar */
+
+
+
+
+/* css for container that is rendered on every page */
   .container {
     max-width: 900px;
     margin: 50px auto;
@@ -47,7 +79,7 @@ body {
 
 
 
-  .search-box {
+.search-box {
     display: flex;
     align-items: center;
     padding: 10px;
@@ -63,6 +95,7 @@ body {
     border-radius: 4px;
      /* Adjust this value to create space between search box and button */
 }
+
 button {
     text-decoration: none;
     background-color: #007bff;
@@ -73,7 +106,7 @@ button {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
+}
   
   button.full-width {
     display: block;
@@ -103,33 +136,12 @@ button {
   margin-bottom: 50px;
 }
 
-.navbar{
-  background-color: #00264d;
-  height: 40px;
-  display: flex;
-  margin: 0 auto;
-}
-
-
-a{
- margin-top: 5px;
-}
-
-.aa{
-  padding:3px;
-  color: #00264d;
-  background-color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.aa:hover{
-  color: #007bff;
-}
+/* css completed for conatiner */
 
 /* .navbar-yonsei{
 
 } */
+
 
 .utube{
   height: 450px;
@@ -183,6 +195,10 @@ line-height: 1;
 .university-info{
   color: #fff;
 }
+
+
+
+/* css for footer */
 
 footer{
   background-color: #00264d;

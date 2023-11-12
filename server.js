@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.set('view engine' , 'ejs');
 app.use(express.static("public"));
-app.set('views', '/opt/render/project/src/views');
+
 
 
 // mongoose connection
@@ -33,7 +33,7 @@ const postSchema = {
 const Post = mongoose.model("Post", postSchema );
 
 
-app.get('/home' , (req,res)=>{
+app.get('/about' , (req,res)=>{
     res.render('single.ejs')
 } )
 
@@ -75,7 +75,7 @@ app.get("/" , async function(req,res){
 
         if (firstPost) {
             // Render the 'home' page with the first post
-            res.render('home.ejs', {
+            res.render('about.ejs', {
                 posts: [firstPost],
             });
         } else {
@@ -141,7 +141,7 @@ app.get('/api/:postNumber', async (req, res) => {
 
         if (foundPost) {
             // Render the 'home' page with the specific post
-            res.render('home.ejs', {
+            res.render('about.ejs', {
                 posts: [foundPost],
             });
         } else {
@@ -157,7 +157,7 @@ app.get('/api/:postNumber', async (req, res) => {
 // dummy email used inside footer
 app.post('/email' , (req,res)=>{
     console.log(req.body.email);
-    res.redirect('/home')
+    res.redirect('/about')
 })
 
 // getting a specific topic from the database

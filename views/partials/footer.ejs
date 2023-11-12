@@ -25,24 +25,7 @@
         </div>
       </footer>
       
-      <script>
-        // Assume you have a function that makes the request to the server, e.g., using fetch
-        async function searchData(searchTopic) {
-            const response = await fetch(`/search-item?search=${searchTopic}`);
-            const data = await response.json();
-    
-            if (response.ok) {
-                // Handle the case when results are found
-                console.log(data);
-            } else {
-                // Handle the case when no results are found
-                alert(data.message);
-            }
-        }
-    
-        // Example usage
-        searchData('yourSearchTopic');
-    </script>
+  
 </body>
 
 </html>
