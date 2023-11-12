@@ -1,0 +1,48 @@
+</div>
+
+
+
+      <footer>
+        <div class="footer-content">
+          <div class="footer-info">
+           
+            <p><a href="#">Privacy Policy</a></p>
+            <p><a href="#">Cookie Policy</a></p>
+            <p><a href="#">Site Map</a></p>
+          </div>
+          <div class="university-info">
+            <p>Yonsei University</p>
+            <p>50 Yonsei-ro Seodaemun-gu, Seoul, 03722, Republic of Korea</p>
+            <p>© 2015-2019 YONSEI UNIV. ALL RIGHTS RESERVED.</p>
+          </div>
+          <div class="subscribe">
+          <p>Subscribe to our newsletter</p>
+            <form  action="/email" method="post">
+              <input  type="email" name="email" placeholder="Your email">
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </footer>
+      
+      <script>
+        // Assume you have a function that makes the request to the server, e.g., using fetch
+        async function searchData(searchTopic) {
+            const response = await fetch(`/search-item?search=${searchTopic}`);
+            const data = await response.json();
+    
+            if (response.ok) {
+                // Handle the case when results are found
+                console.log(data);
+            } else {
+                // Handle the case when no results are found
+                alert(data.message);
+            }
+        }
+    
+        // Example usage
+        searchData('yourSearchTopic');
+    </script>
+</body>
+
+</html>

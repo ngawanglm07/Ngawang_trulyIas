@@ -1,25 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <% posts.forEach(function(post){ %>
-        <div class="box ">
-         <!-- <img src="../images/crunchy.JPG" > -->
-         <h1 style="font-size:22px; font-weight: bold;"><%= post.title %></h1>
-         <p style="font-size:12px;"><%= post.question %></p>
-         <h5><%= post.answer %></h5>
-         <h5><%= post.url %></h5>
-         <h5><%= post.submitTime %></h5>
-         <h5><%= post.subject %></h5>
-         <h5><%= post.topic %></h5>
-         <a href="/api/posts/next/<%=post.postNumber - 1 %>">prev</a>
-         <a href="/api/posts/next/<%=post.postNumber  + 1%>">next</a>
-         
-        </div>
-        <% }) %> 
-</body>
-</html>
+<%- include("partials/header"); -%>
+
+        <% posts.forEach(function(post){ %>
+            <div class="box ">
+             <div class="inside-box">
+             <h1 style="font-size:22px; font-weight: bold;"><%= post.title %></h1>
+             <h2><%= post.question %></h2>
+             <h5 class="answer"><%= post.answer %></h5>
+             <h5><%= post.url %></h5>
+             <h5><%= post.submitTime %></h5>
+             <h5><%= post.subject %></h5>
+             <h5><%= post.topic %></h5>
+             <div class="button-group">
+                <a href="/api/<%=post.postNumber - 1 %>" class="prev">prev</a>
+                <a href="/api/<%=post.postNumber  + 1%>" class="next">next</a>
+             </div>
+
+
+            </div>
+            </div>
+            <% }) %> 
+
+ 
+        <%- include("partials/footer"); -%>

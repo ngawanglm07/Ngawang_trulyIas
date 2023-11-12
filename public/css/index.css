@@ -1,0 +1,306 @@
+body,
+h1,
+h2,
+p,
+ul,
+li,
+form,
+input,
+textarea,
+a {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: "Arial", sans-serif;
+} 
+
+
+#question{
+ border: 1px solid blue;
+}
+
+
+body {
+   
+    background-image: url("../images/Yonsei-University-campus.-Photo-via-Yonsei-University..jpg");
+    background-size: cover;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+
+
+.searchbox-container{
+  width: 100%;
+ display: flex;
+ justify-content: space-between;
+ background-color: #ffffff;
+
+}
+
+
+
+  .search-box {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.searching {
+    padding: 5px;
+    height: 27px;
+    width: 200px;
+    background-color: #f6fcff;
+    border: 1px solid rgb(190, 190, 228);
+    border-radius: 4px;
+     /* Adjust this value to create space between search box and button */
+}
+button {
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button.full-width {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .searchImg {
+    width: 10%; /* Adjust this percentage according to your needs */
+    height: auto;
+    /* margin-right: 10px; */
+    background: transparent;
+}
+
+.searchImg2{
+  width: 25%; /* Adjust this percentage according to your needs */
+  height: auto;
+}
+
+.box{
+  background-color: #c5e2ff;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.navbar{
+  background-color: #00264d;
+  height: 40px;
+  display: flex;
+  margin: 0 auto;
+}
+
+
+a{
+ margin-top: 5px;
+}
+
+.aa{
+  padding:3px;
+  color: #00264d;
+  background-color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.aa:hover{
+  color: #007bff;
+}
+
+/* .navbar-yonsei{
+
+} */
+
+.utube{
+  height: 450px;
+  width: 90%;
+  margin: 20px;
+}
+
+.yonsei-news{
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.yonsei-news-section{
+  margin-top: 30px;
+  justify-content: flex-start;
+   width: 25%;
+ }
+.yonsei-news-section-img {
+ 
+  height: 165px;
+  width: 25%px;
+  background: transparent;
+}
+
+.yonsei-news-section-title{
+font-family: 'Assistant' , sans-serif;
+font-size: 22px;
+line-height: 1;
+}
+.yonsei-news-section-paragraph{
+  margin-top: 5px;
+  font-size: 11px;
+
+}
+
+.yonsei-news-section-paragraph1{
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 11px;
+
+}
+.yonsei-news-section-readmore{
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+
+
+.university-info{
+  color: #fff;
+}
+
+footer{
+  background-color: #00264d;
+  padding: 20px 0;
+  text-align: center;
+}
+
+
+
+
+/* Existing CSS remains unchanged */
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items to the center vertically */
+
+  
+}
+
+.footer-info , a{
+  display: flex;
+  color: white;
+  margin-left:10px ;
+  text-decoration: none;
+}
+
+
+
+
+.subscribe {
+  text-align: right; /* Align text to the right */
+  color: #fff;
+  margin-right: 20px; /* Adjusted margin for spacing from the right */
+}
+
+/* form {
+  display: flex;
+  margin-top: 5px; 
+} */
+
+input {
+  padding: 8px;
+  margin-right: 5px;
+  border: 1px solid #ddd;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+.inside-box{
+  margin-left: 15px;
+  
+}
+
+.inside-boxx{
+  height: 300px;
+  margin-left: 50px;
+  padding-top:50px ;
+}
+
+
+
+.button-group{
+  display: flex;
+  padding: 10px;
+}
+
+
+.prev{
+  background-color: #00264d;
+  color: white;
+  border-radius: 4px;
+  padding-top:2px;
+  padding-left: 11px;
+  padding-right: 11px;
+  font-size: small;
+}
+
+
+
+.next{
+  background-color: #00264d;
+  color: white;
+  border-radius: 4px;
+  padding-top:2px;
+  padding-left: 11px;
+  padding-right: 11px;
+  font-size: small;
+}
+
+.checking{
+  margin-bottom: 370px;
+}
+
+
+ .sub-btn{
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.sub-btn:hover {
+  background-color: #45a049;
+}
+
+
+
