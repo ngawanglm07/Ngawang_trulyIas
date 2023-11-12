@@ -140,7 +140,7 @@ app.get('/api/:postNumber', async (req, res) => {
 
         if (foundPost) {
             // Render the 'home' page with the specific post
-            res.render('Home.ejs', {
+            res.render('home.ejs', {
                 posts: [foundPost],
             });
         } else {
