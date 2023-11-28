@@ -12,7 +12,6 @@ app.set('view engine' , 'ejs');
 app.use(express.static("public"));
 
 
-
 // mongoose connection
 mongoose.connect(`mongodb+srv://ngawangg:applepie@cluster0.7h0rl9g.mongodb.net/truly?retryWrites=true&w=majority` ,);
 
@@ -163,6 +162,7 @@ app.post('/email' , (req,res)=>{
 // getting a specific topic from the database
 app.get('/search-item' , async (req,res)=>{
     const searchTopic = req.query.search;
+    console.log(searchTopic)
      try {
          // Use the searchTopic to find relevant data in your MongoDB collection
          const searchResults = await Post.find({ subject : { $regex: new RegExp(searchTopic, 'i') } });
